@@ -15,7 +15,7 @@ class PDFInput(BaseModel):
 
 def main():
     st.set_page_config(page_title="IntelliNote")
-    st.header("IntelliNote")
+    st.header("Text Summarizer")
 
     st.write("Get your notes from Google Drive by clicking the button below:")
     url = 'https://drive.google.com/drive/folders/1Lk59jzlR1PDM7pfO8tJEiLPUB8_vfn6C'
