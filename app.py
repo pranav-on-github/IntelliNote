@@ -17,9 +17,16 @@ def main():
     st.set_page_config(page_title="IntelliNote")
     st.header("IntelliNote 🤖")
 
-    st.write("Get your notes from Google Drive by clicking the link below:")
+    # st.write("Get your notes from Google Drive by clicking the link below:")
+    # url = 'https://drive.google.com/drive/folders/1Lk59jzlR1PDM7pfO8tJEiLPUB8_vfn6C'
+    # st.markdown(f"[Open Drive]({url})", unsafe_allow_html=True)
+
+    st.write("Get your notes from Google Drive by clicking the button below:")
     url = 'https://drive.google.com/drive/folders/1Lk59jzlR1PDM7pfO8tJEiLPUB8_vfn6C'
-    st.markdown(f"[Open Drive]({url})", unsafe_allow_html=True)
+    if st.button('Open Drive'):
+        js = f"window.open('{url}');"
+        html = f'<img src onerror="{js}">'
+        st.markdown(html, unsafe_allow_html=True)
 
     pdf = st.file_uploader("Upload your PDF to ask questions", type="pdf")
 
