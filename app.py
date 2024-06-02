@@ -18,7 +18,7 @@ def main():
     st.header("IntelliNote")
 
     st.write("Get your notes from Google Drive by clicking the button below:")
-    url = 'https://drive.google.com/drive/folders/1Lk59jzlR1PDM7pfO8tJEiLPUB8_vfn6C'
+    url = "https://drive.google.com/drive/folders/1Lk59jzlR1PDM7pfO8tJEiLPUB8_vfn6C"
     if st.button('Open Drive'):
         webbrowser.open_new_tab(url)
     pdf = st.file_uploader("Upload your PDF to ask questions", type="pdf")
